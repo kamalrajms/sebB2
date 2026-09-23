@@ -1,0 +1,40 @@
+22/09/2026
+
+## Props
+
+    Props is nothing but drilling data from parent component to child component.
+
+        Declearing Props
+        Destructuring Props
+
+## Conditional rendering
+
+    Conditional rendering means showing or hiding part of UI basde onsome condition.
+
+            ternary operator  {condition ? true : false}
+            logical operator   && || !
+
+
+23/09/2026
+
+## List rendering in react
+
+    rendering multiple items dynamically using .map()
+
+    arr=[1,2,3,4]
+
+    arr.map((num)=>{
+        num*2
+    })
+
+    arr=[2,4,6,8]
+
+
+## styleing in react
+
+    global styleing -- index.css and app.css is called as global styleing.
+    local styleing -- to create a seperate css file for a component.
+    module styleing -- to create a seperate css file for a component .
+                        file name in the formate of [fileName.module.css]
+    inline styleing -- to implement inline style we need to declear [style] attribute in {{padding:"20px"}}
+    object styleing -- we need to declear a styleing property in object with key & value pair
