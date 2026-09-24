@@ -5,6 +5,9 @@ import Destructure from "./Component/Destructure";
 import ConditionalRender from "./Component/ConditionalRender";
 import ListRender from "./Component/ListRender";
 import Object from "./Component/Object";
+import UseStateHook from "./Component/UseStateHook";
+import DarkMode from "./Component/DarkMode";
+import Field from "./Component/Field";
 
 export default function App() {
   const name = "rahul";
@@ -19,6 +22,9 @@ export default function App() {
 
   return (
     <div>
+      <Field/>
+      <DarkMode />
+      <UseStateHook />
       <Object />
       <ListRender />
       <ConditionalRender />
