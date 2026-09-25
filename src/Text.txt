@@ -75,7 +75,7 @@
     object styleing -- we need to declear a styleing property in object with key & value pair
 
 
-24/09/2026
+24/09/2026  & 25/09/2026
 
 ## usestate() 
 
@@ -93,3 +93,51 @@
     setState-- a function that update the state
     initiateValue -- the starting value of the state.
     
+
+## useEffect()
+
+    In react, useEffect is a hook that lets you perform side effect in functional component.
+    Side effect are tasks that happen outside the normal react rendeering process,like:
+
+            fetch the data from an API
+            Updating the browser dom manually
+            Starting.stoping timers
+
+
+    syntax:
+
+            useEffect(()=>{
+                //code
+            },[dependency 1, dependency 2,,....])
+
+            [] -- it will execut it once at begining.
+
+
+## domain
+
+    a domin is the main website address people use to access a website.
+
+    ex: example.com
+
+## sub domin
+
+     a subDomain is  acreated before the main domain to seperate a particular Applications,
+     server, or sector
+
+     ex:
+            example.com
+            admin.example.com
+            blog.example.com
+
+## types of domain
+
+.com -- commercial
+.in -- india
+.org --- organization
+.net -- network
+.edu -- education
+.gov -- government
+.mil -- military
+.co -- company
+
+

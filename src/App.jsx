@@ -8,6 +8,9 @@ import Object from "./Component/Object";
 import UseStateHook from "./Component/UseStateHook";
 import DarkMode from "./Component/DarkMode";
 import Field from "./Component/Field";
+import RegForm from "./Component/RegForm";
+import ConditionalFrom from "./Component/ConditionalFrom";
+import UseEffectHook from "./Component/UseEffectHook";
 
 export default function App() {
   const name = "rahul";
@@ -22,7 +25,10 @@ export default function App() {
 
   return (
     <div>
-      <Field/>
+      <UseEffectHook />
+      <ConditionalFrom />
+      <RegForm />
+      <Field />
       <DarkMode />
       <UseStateHook />
       <Object />
