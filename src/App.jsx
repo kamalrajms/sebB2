@@ -11,6 +11,10 @@ import Field from "./Component/Field";
 import RegForm from "./Component/RegForm";
 import ConditionalFrom from "./Component/ConditionalFrom";
 import UseEffectHook from "./Component/UseEffectHook";
+import Timer from "./Component/Timer";
+import StopWatch from "./Component/StopWatch";
+import UseEffectAIP from "./Component/UseEffectAIP";
+import UseRefHook from "./Component/UseRefHook";
 
 export default function App() {
   const name = "rahul";
@@ -25,6 +29,10 @@ export default function App() {
 
   return (
     <div>
+      <UseRefHook />
+      <UseEffectAIP />
+      <StopWatch />
+      <Timer />
       <UseEffectHook />
       <ConditionalFrom />
       <RegForm />

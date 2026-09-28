@@ -93,6 +93,7 @@
     setState-- a function that update the state
     initiateValue -- the starting value of the state.
     
+28/09/2026
 
 ## useEffect()
 
@@ -141,3 +142,18 @@
 .co -- company
 
 
+## useRef()
+
+    useRef is a react hook that gives you box (.current) you can store anything in
+    like: num,string,obj,function,DOM.
+
+    That value persists b/w render.
+
+    Updating it does not cause your component to re-render.
+
+
+    {current:value}
+
+    syntax:
+
+        const variables=useRef(initiateValue)
