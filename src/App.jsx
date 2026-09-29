@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 import Kamal from "./Greeting";
 import Hello from "./Hello";
 import Destructure from "./Component/Destructure";
@@ -15,6 +15,11 @@ import Timer from "./Component/Timer";
 import StopWatch from "./Component/StopWatch";
 import UseEffectAIP from "./Component/UseEffectAIP";
 import UseRefHook from "./Component/UseRefHook";
+import First from "./Context/First";
+import ContextFrom from "./Context/ContextFrom";
+import UseReducerHook from "./Component/UseReducerHook";
+
+export const Pass = createContext();
 
 export default function App() {
   const name = "rahul";
@@ -27,8 +32,22 @@ export default function App() {
   const age3 = 58465;
   const city3 = "namakkal";
 
+  const [mode, setMode] = useState("light");
+  const data = { name: "react.js" };
   return (
     <div>
+      <UseReducerHook />
+      <div style={{ padding: "20px", border: "2px solid #333" }}>
+        <Pass.Provider value={{ mode, setMode, data }}>
+          <ContextFrom />
+        </Pass.Provider>
+      </div>
+      <div style={{ padding: "20px", border: "2px solid #333" }}>
+        <h2>App component--{name}</h2>
+        <Pass.Provider value={name}>
+          <First />
+        </Pass.Provider>
+      </div>
       <UseRefHook />
       <UseEffectAIP />
       <StopWatch />

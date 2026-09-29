@@ -157,3 +157,30 @@
     syntax:
 
         const variables=useRef(initiateValue)
+
+
+29/09/2026
+
+## useContext ()
+
+    Passing data from a parent componeent down to deeply nested child component is annoying.
+    Normally, you'd have to pass props manually through each level called Props.
+    useContext lets you skip all the middle component and  share data directly.
+
+            Create a context
+            Provide a value
+            Consume the value
+
+    in a componentwe can declear only one creatContext hook .
+
+
+## useReducer()
+
+    syntax:
+
+        const [state,dispatch]=useReducer(reducerFunction,initialState)
+
+        state -- current state (like usestate value)
+        dispatch(action) -- a function to tell react what too do
+        reducerFunction(state,action) -- the logic that return a new state
+        initialState -- starting value 
