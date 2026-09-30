@@ -184,3 +184,50 @@
         dispatch(action) -- a function to tell react what too do
         reducerFunction(state,action) -- the logic that return a new state
         initialState -- starting value 
+
+
+30/09/2026
+
+## Routing  &&  nested routing 
+
+    Routing means navigating b/w different pages in a web Applications 
+    without refreshing the browser.
+
+    In traditional website , clicking a link reloads the whole pages.
+
+    In react (Single PAge Application), Routing lets us changes the view without reloading
+
+
+            better performance (no full page reloads)
+            Smooth user experience
+            Control over navigating without server request.
+
+
+commend : npm install react-router-dom
+
+
+    Basic structure
+
+    <BrowserRouter>
+        <Routes>
+            <Route path="address path" elememt={<component/>}/>
+            <Route path="/Home" elememt={<Home/>}/>
+            <Route path="/about" elememt={<About/>}/>
+        </Routes>
+    </BrowserRouter>
+
+    BrowserRouter
+
+        It is the main wrapper component for routing in react app.
+        It enables navigation using  the browser  URL's.
+        Without this routing  will not work
+
+    Routes
+
+        it contains all the  <Route/> component'
+        It tells react router which component to show for thich path
+        Only one route will match and render at a time.
+
+    Route
+
+        Defines a specific URL path and which component should load for that path. 

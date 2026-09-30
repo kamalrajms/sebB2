@@ -18,6 +18,14 @@ import UseRefHook from "./Component/UseRefHook";
 import First from "./Context/First";
 import ContextFrom from "./Context/ContextFrom";
 import UseReducerHook from "./Component/UseReducerHook";
+import ReducerForm from "./Component/ReducerForm";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import About from "./Route/About";
+import Service from "./Route/Service";
+import Contact from "./Route/Contact";
+import Home from "./Route/Home";
+import WebApp from "./Route/WebApp";
+import AppApp from "./Route/AppApp";
 
 export const Pass = createContext();
 
@@ -34,41 +42,68 @@ export default function App() {
 
   const [mode, setMode] = useState("light");
   const data = { name: "react.js" };
+  const display = false;
   return (
     <div>
-      <UseReducerHook />
-      <div style={{ padding: "20px", border: "2px solid #333" }}>
-        <Pass.Provider value={{ mode, setMode, data }}>
-          <ContextFrom />
-        </Pass.Provider>
-      </div>
-      <div style={{ padding: "20px", border: "2px solid #333" }}>
-        <h2>App component--{name}</h2>
-        <Pass.Provider value={name}>
-          <First />
-        </Pass.Provider>
-      </div>
-      <UseRefHook />
-      <UseEffectAIP />
-      <StopWatch />
-      <Timer />
-      <UseEffectHook />
-      <ConditionalFrom />
-      <RegForm />
-      <Field />
-      <DarkMode />
-      <UseStateHook />
-      <Object />
-      <ListRender />
-      <ConditionalRender />
-      <h2 style={{ padding: "20", color: "red", backgroundColor: "yellow" }}>
-        hello world
-      </h2>
-      <Kamal />
-      <Hello />
-      <Destructure name={name} age={age} city={city} />
-      <Destructure name={name2} age={age2} city={city2} />
-      <Destructure name={name3} age={age3} city={city3} />
+      {display && (
+        <div>
+          <ReducerForm />
+          <UseReducerHook />
+          <div style={{ padding: "20px", border: "2px solid #333" }}>
+            <Pass.Provider value={{ mode, setMode, data }}>
+              <ContextFrom />
+            </Pass.Provider>
+          </div>
+          <div style={{ padding: "20px", border: "2px solid #333" }}>
+            <h2>App component--{name}</h2>
+            <Pass.Provider value={name}>
+              <First />
+            </Pass.Provider>
+          </div>
+          <UseRefHook />
+          <UseEffectAIP />
+          <StopWatch />
+          <Timer />
+          <UseEffectHook />
+          <ConditionalFrom />
+          <RegForm />
+          <Field />
+          <DarkMode />
+          <UseStateHook />
+          <Object />
+          <ListRender />
+          <ConditionalRender />
+          <h2
+            style={{ padding: "20", color: "red", backgroundColor: "yellow" }}
+          >
+            hello world
+          </h2>
+          <Kamal />
+          <Hello />
+          <Destructure name={name} age={age} city={city} />
+          <Destructure name={name2} age={age2} city={city2} />
+          <Destructure name={name3} age={age3} city={city3} />
+        </div>
+      )}
+
+      <BrowserRouter>
+        <div className="header">
+          <Link to={"/Home"}>home</Link>
+          <Link to={"/"}>About</Link>
+          <Link to={"/Service"}>Service</Link>
+          <Link to={"/Contact"}>Contact</Link>
+        </div>
+
+        <Routes>
+          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<About />} />
+          <Route path="/Service" element={<Service />} >
+            <Route path="" element={<WebApp/>}/>
+            <Route path="app" element={<AppApp/>}/>
+          </Route>
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
