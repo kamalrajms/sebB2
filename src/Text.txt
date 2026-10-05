@@ -231,3 +231,46 @@ commend : npm install react-router-dom
     Route
 
         Defines a specific URL path and which component should load for that path. 
+
+
+5/10/2026
+
+## useParams()
+
+    useParams is a hook provided by react router that return an object containing keys/value
+    pair of dynamic parameter from the current url.
+    These parameter are defined in your router path using  a colon ( : ) followed by parameter name.
+
+    syntax:
+
+        const variables=useParams()
+
+
+    ex: if you have a route defined as  /blogs/:id the current url is /blog/hello-world ,
+        useParams return  {id:"hello-world}
+
+    The colon tells react router that id is a dynamic parameter  - not a literal path segment.
+
+
+## useNavigate()
+
+
+    useNavigate is a hook provided by react router that return a function allowing you to 
+    Programmitacally navigate to different route (change the url) in response to events like 
+    from submisson, click, timers.....
+
+    syntax :
+
+        const variables=useNavigate()
+
+
+## useId()
+
+    useId is a react hook introdced in react 18
+
+    It is  used to genetate unique id that are consistent b/w server and client  render.
+
+    syntax:
+
+
+        const variables=useId()
