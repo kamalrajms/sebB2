@@ -274,3 +274,21 @@ commend : npm install react-router-dom
 
 
         const variables=useId()
+
+06/10/2026
+
+## useSearchParams()
+
+    useSearchParams is a hook provided by React Router used to read ,access and update 
+    query parameters in the url.
+
+    useSearchParams helps manage url query parameter dynamically in react Application.
+
+
+    syntax:
+
+        const [searchParams,setSearchParams]=useSearchParams();
+
+        searchParams -- read value
+        setSearchParams -- update value
+

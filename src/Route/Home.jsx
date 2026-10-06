@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import UsePAramHook from "../Component/UsePAramHook";
 import { useNavigate } from "react-router-dom";
 import UseIdhook from "../Component/UseIdhook";
+import UseSearchPAramHook from "../Component/UseSearchPAramHook";
 
 export default function Home() {
   const page = useNavigate();
@@ -14,6 +15,7 @@ export default function Home() {
   }, [count]);
   return (
     <div>
+      <UseSearchPAramHook />
       <UseIdhook />
       <UseIdhook />
       <h2> count-{count}</h2>
