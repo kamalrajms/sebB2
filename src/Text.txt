@@ -292,3 +292,35 @@ commend : npm install react-router-dom
         searchParams -- read value
         setSearchParams -- update value
 
+        
+07/10/2026
+
+## API 
+
+    fetch,axios
+
+    commend: npm install axios
+
+    response={
+        status-code:200,
+        status:success,
+        header:{....}
+        configure:{...},
+        data:[{id:1},{id:2},{id:3},{}]
+        ok:true,
+        err:{
+            message:"kwbfwrhfb"
+        }
+    }
+
+## custom Hook
+
+    A custom hook is a reusable function in react that contain logic using hook
+    like (usestate,useEffect....)
+
+    It allows you to share and reuse stateful logic b/w multiple component 
+    without repeating code.
+
+    The name of  a custom hook must start with [ use ] such a useFetch , useLocation..
+
+    custom hook in a js file.
