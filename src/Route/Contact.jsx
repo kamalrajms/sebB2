@@ -1,5 +1,6 @@
 import React from "react";
 import useAxiosAPI from "../Component/useAxiosAPI";
+import CRUD from "../Component/CRUD";
 
 export default function Contact() {
   const {
@@ -12,6 +13,7 @@ export default function Contact() {
   return (
     <div>
       <h2>contact component</h2>
+      <CRUD />
       {user.map((person) => (
         <div
           key={person.id}

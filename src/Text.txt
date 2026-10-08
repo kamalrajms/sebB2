@@ -324,3 +324,101 @@ commend : npm install react-router-dom
     The name of  a custom hook must start with [ use ] such a useFetch , useLocation..
 
     custom hook in a js file.
+
+
+08/10/2026
+
+## CRUD
+                    method of req
+    Create  ----- POST
+    Read -------- GET 
+    update ------ PUT 
+    Delete ------ DELETE 
+
+
+                         http request
+     react app [Clint]  ------------->  server 
+                        <------------
+                        http resopnse {json}
+
+## redux
+
+    props:
+
+        pass data parent to child
+
+        component(parent)-----> component(child)
+
+    useContext:
+
+        conponent A [lap,price]
+
+        conponent B [user] lap
+
+        conponent C  lap,user
+
+        conponent D  price
+
+    Redux:
+
+
+    Component A [lap,price]
+
+    Component B [user]
+                                redux  store{[lap],[price],[user]}
+    Component C lap
+
+    Component D user
+
+
+    Redux  is a state manage libeary that provide a centralized store for managing Application state
+    And allows component to acces and update shared state in a predictable way.
+
+    Commend: npm install @redauxjs/toolkit react-redux
+
+    @redauxjs/toolkit --- provide configureStore,createSlice
+    react-redux  --- it provide additional features useDispatch,useSelector,Provider
+
+
+    Redux store--
+
+        A redux store is a centralized cintainer that holde the complete state of a 
+        Redux Application and provide  a way to access and update that state.
+
+
+        structure:
+
+            const store= configureStore({
+                reducer:{
+                    customer1:slice1,
+                    customer2:slice2,
+                }
+            })
+
+        
+    Redux Slice 
+
+        A redux slice is a portion of the redux state that contain the initialState,reducers,
+        related to a specific features of the application.
+
+        Slice = a sppecific section of the application state along with the logic to manage it.
+
+
+        structure:
+
+        const Slice1=createSlice({
+            name:"person",
+            initialState:""
+            reducer:{
+                add(),
+                delete(),
+            }
+        })
+        const Slice2=createSlice({
+            name:"person",
+            initialState:""
+            reducer:{
+                add(),
+                delete(),
+            }
+        })
