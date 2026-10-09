@@ -422,3 +422,14 @@ commend : npm install react-router-dom
                 delete(),
             }
         })
+
+
+09/10/2026
+
+## netlify
+
+    step 1: push your code in github
+    s 2:create account in netlify
+    s 3: link github with netlify
+    s 4: select the resporestary
+    s 5: deploy...
